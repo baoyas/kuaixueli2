@@ -146,7 +146,7 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder{color: #b5
 .iSubNav > div > ul{height: 100%;}
 
 /*le*/
-.iSubNavLe{width: 659px;background: url("../Image/navbg.jpg") no-repeat scroll right bottom;}
+.iSubNavLe{width: 659px;background: url("../Image/navbg1.png") no-repeat scroll right bottom;}
 .iSubNavLe li{float: left;width: 100%;}
 .iSubNavLe li > div{float: left;width: 520px;border-top: 1px solid #eaeaea;padding: 23px 0;}
 .iSubNavLe li > .kfwNavOne{border-top: none;}
