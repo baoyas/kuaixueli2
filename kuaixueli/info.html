@@ -14,7 +14,7 @@
 	<link rel="stylesheet" href="Js/plugin/dialog/ui-dialog.css" />
 	<link rel="stylesheet" href="Css/header.css" />
 	<link rel="stylesheet" href="Css/buy.css" />
-			<!-- 调用Static下的公用文件 -->
+			<!-- 公用文件 -->
 	<script type="text/javascript" src="Js/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="Js/jquery.tab.1.0.js"></script>
 	<script type="text/javascript" src="Js/plugin/dialog/dialog-min.js"></script>
@@ -57,19 +57,19 @@
 	<ul class="overflowhidden floatRight headerOverflowInherit">
 		<li><a class="noBorder" href="login.html">登录</a></li>
 		<li><a href="register.html">免费注册</a></li>
-		<li><a href="/user/orders/index.html">我的订单</a></li>
-		<li><a class="welcome1" href="/cart/info.html"><i class="gw floatLeft"></i>购物车<em>0</em>件</a></li>
+		<li><a href="login.html">我的订单</a></li>
+		<li><a class="welcome1" href="info.html"><i class="gw floatLeft"></i>购物车<em>0</em>件</a></li>
 		<li><a href="#" target="_blank">院校入驻</a></li>
-		<li><a href="/help/joining.html" target="_blank" style="color:#00a5d5;">助学机构入驻</a></li>
+		<li><a href="#" target="_blank" style="color:#00a5d5;">助学机构入驻</a></li>
 		<li class="asj app">
-			<a href="/mobile/index.html">
+			<a href="#">
 				<i class="sj floatLeft"></i><i class="jt floatRight"></i>移动应用
 			</a>
 			<div class="welcomeKfwShow aimationKfw">
 				<em></em>
 				<img src="Image/Home_index/kuaixuelierweima.png" alt="微信图片">
 				<h4>关注快学历官方微信</h4>
-				<a class="butTgreen padding14" href="/mobile/index.html">更多移动应用</a>
+				<a class="butTgreen padding14" href="#">更多移动应用</a>
 			</div>
 		</li>
 	</ul>
@@ -146,7 +146,8 @@
 </div>
 <!-- 导航 -->
 <div class="main greyf5f5f5">
-	<!-- 购物车 -->
+	
+	<!-- 购物车 空 -->
 		<div class="minwidth">
 		<div class="cart-empty">
 			<h3>您的购物车还是空的！</h3>
@@ -157,7 +158,117 @@
 			</div>
 		</div>
 	</div>
+	<!--购物车 有东西-->
 	<div class="minwidth">
+		<form id="cartForm" noenter="1">
+		<!-- 服务列表 -->
+		<div class="minwidth marT40">
+			<!-- 登陆提示 -->
+						<div class="login-tips">您还没有登录！登录后购物车的商品将保存到您账号中。<a href="login.html"  class="butWhite">立即登录</a></div>
+						<!-- 登陆提示 -->
+			<!-- 当一个列表中有多个选项时，要加class:buyBorder并且第一个li要加class:noBuyBorder -->
+			<!-- 优惠套餐 -->
+			<ul class="buySerList bordere0e0e0">
+				<li class="shopp-list">
+					<!-- 表头 -->
+					<div class="shoppTitle">
+						<ol class="shoppFirst">
+							<li class="goods">商品信息</li>
+							<li class="unit-price">单价</li>
+							<li class="shopp-num">数量</li>
+							<li class="shopp-subtotal">小计</li>
+							<li class="operation">操作</li>
+						</ol>
+					</div>
+					<!-- 表头 -->
+
+					<!-- 普通类型 -->
+																												
+							<ol>
+								<li class="goods">
+									<img class="floatLeft marL40 imgW50" src="http://cdn.kuaifawu.com/product/cart/165.png" alt="">
+									<div class="textImgSeparation goods-text">
+										<div>
+											<span>合伙企业注册</span>
+										</div>
+										<div class="area">
+											<em>地区：</em>
+											<span>上海-金山区</span>
+										</div>
+																			</div>
+								</li>
+								<li class="unit-price">
+									<span>1399元</span>
+								</li>
+								<li class="shopp-num">
+									<div class="numAddSubtract overflowhidden">
+										<a class="subtract " href="javascript:;" id="productReduce_0" onclick="changeNum('product', -1, 0);">-</a>
+										<input type="text" value="3" onkeyup="numberFilter(this);" name="productnums[0]" id="productNum_0" style="width:40px;" class="t-productNum" category="product" key="0" pprice="1399" vprice="0" data-productid="165">
+										<a href="javascript:;" onclick="changeNum('product', 1, 0);">+</a>
+									</div>
+								</li>
+								<li class="shopp-subtotal">
+									<span id="productTotalPrice_0">4197元</span>
+																	</li>
+								<li class="operation">
+									<a href="/cart/delete/type/product/key/0.html">删除</a>
+									<!--<span>x</span>-->
+								</li>
+							</ol>
+																<!-- 普通类型 -->
+
+					<!-- 自定义支付 -->
+										<!-- 自定义支付 -->
+
+					<!-- 套餐类型 -->
+										<!-- 套餐类型 -->
+
+				</li>
+			</ul>
+			<!-- 优惠套餐 -->
+		</div>
+		<!-- 服务列表 -->
+		<!-- 购物车信息 -->
+		<div class="minwidth">
+			<!--优惠券信息-->
+						
+			<!--优惠券信息-->
+			<div class="floatRight marT30 checkoutWrap marB40" style="position:relative;">
+				<ul class="checkout floatRight">
+					<li>
+						<span class="checkout-le">金额合计：</span>
+						<span class="checkout-ri" id="totalPrice">4197元</span>
+					</li>
+										<li>
+						<span class="checkout-le">代金券抵扣：</span>
+						<span class="checkout-ri" id="couponPrice">0元</span>
+					</li>
+					<li>
+						<span class="checkout-le">应付总额：</span>
+						<span class="checkout-ri"><em id="totalPayPrice">4197元</em></span>
+					</li>
+				</ul>
+				<div class="marT30 floatRight">
+					<a class="butpadding64 inlineBlock floatRight butRed" href="Javascript:;" id="orderButton" data-urlkey="">去结账</a>
+					<a class="butpadding21 inlineBlock floatRight butWhiteGreyborder marR20" href="/">继续购物</a>
+				</div>
+				<!-- 如何获取发票 -->
+				<div class="invoiceWrap">
+					<div class="invoiceTip">
+						如何获取发票？
+						<div class="invoiceInner">
+							<span></span>
+							1、发票由为您提供服务的服务商所在公司开具；
+							2、服务完成后90天内，可联系服务商索取发票。
+						</div>
+					</div>
+				</div>
+				<!-- 如何获取发票 -->
+			</div>
+			
+		</div>
+		<!-- 购物车信息 -->
+	<input type="hidden" name="__hash__" value="ddc94d7572c88646fbada304ba7c131b_532b506724d22ae4045f3b1f17b0226e"></form>
 	</div>
 </div>
 
