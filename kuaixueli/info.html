@@ -1,0 +1,728 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta name="baidu-site-verification" content="kUyzKDyieJ" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>购物车-快学历</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	<meta name="keywords" content="一年本科学历，学历快速取证，快速拿到本科学历" />
+	<meta name="description" content="快学历自考本科，教育部终身可查，快速毕业，是目前最快取得本科学历的途径，十年自考本科经验，老师一对一考前突击辅导，只为快速拿到本科学历，快学历自考本科，专业丰富的自考本科，公立一本大学供您选择，快学历自考本科，一年本科学历毕业。" />
+	<link rel="stylesheet" href="Css/base.css" />
+	<link rel="stylesheet" href="Js/plugin/dialog/ui-dialog.css" />
+	<link rel="stylesheet" href="Css/header.css" />
+	<link rel="stylesheet" href="Css/buy.css" />
+			<!-- 调用Static下的公用文件 -->
+	<script type="text/javascript" src="Js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="Js/jquery.tab.1.0.js"></script>
+	<script type="text/javascript" src="Js/plugin/dialog/dialog-min.js"></script>
+	<script type="text/javascript" src="Js/base.js"></script>
+	<script type="text/javascript" src="Js/global.js"></script>
+	<script type="text/javascript" src="Js/Provider/zx.js"></script>
+	<script type="text/javascript" src="Js/newConfirm.js"></script>
+	<script type="text/javascript" src="Js/utm.js"></script>
+	
+<body>
+	<!-- 欢迎来到快学历 -->
+	<div class="main greyf5f5f5 headerOverflowInherit">
+		<div class="minwidth welcomeKfw headerOverflowInherit" id='loginbar'>
+			<ul class="overflowhidden floatLeft headerOverflowInherit" >
+		<li class="navLocation">
+			<a href="javascript:;" class="locatinIcon">
+				<i class="mykfw floatRight"></i>北京市</a>
+			<div class="locationLayer">
+				<em></em>
+				<ul>
+					<li><a href="javascript:void(0)">北京</a></li>
+					<li><a href="javascript:void(0)">上海</a></li>
+					<li><a href="javascript:void(0)" >广州</a></li>
+					<li><a href="javascript:void(0)" >深圳</a></li>
+					<li><a href="javascript:void(0)">南京</a></li>
+					<li><a href="javascript:void(0)">杭州</a></li>
+					<li><a href="javascript:void(0)">宁波</a></li>
+					<li><a href="javascript:void(0)">苏州</a></li>
+					<li><a href="javascript:void(0)">成都</a></li>
+					<li><a href="javascript:void(0)">天津</a></li>
+					<li><a href="javascript:void(0)">厦门</a></li>
+					<li><a href="javascript:void(0)">重庆</a></li>
+					<li><a href="javascript:void(0)">武汉</a></li>
+					<li><a href="javascript:void(0)">西安</a></li>
+					<li><a href="javascript:void(0)">全国</a></li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+	<ul class="overflowhidden floatRight headerOverflowInherit">
+		<li><a class="noBorder" href="login.html">登录</a></li>
+		<li><a href="register.html">免费注册</a></li>
+		<li><a href="/user/orders/index.html">我的订单</a></li>
+		<li><a class="welcome1" href="/cart/info.html"><i class="gw floatLeft"></i>购物车<em>0</em>件</a></li>
+		<li><a href="#" target="_blank">院校入驻</a></li>
+		<li><a href="/help/joining.html" target="_blank" style="color:#00a5d5;">助学机构入驻</a></li>
+		<li class="asj app">
+			<a href="/mobile/index.html">
+				<i class="sj floatLeft"></i><i class="jt floatRight"></i>移动应用
+			</a>
+			<div class="welcomeKfwShow aimationKfw">
+				<em></em>
+				<img src="Image/Home_index/kuaixuelierweima.png" alt="微信图片">
+				<h4>关注快学历官方微信</h4>
+				<a class="butTgreen padding14" href="/mobile/index.html">更多移动应用</a>
+			</div>
+		</li>
+	</ul>
+<script type="text/javascript">
+	$(function(){
+		//欢迎来到快学历中去样式
+		$(".asj").on("mouseenter mouseleave",function(e){
+
+			var obj = $(this).next("li").children("a");
+
+			if (e.type == "mouseenter") {
+				obj.css("border","none")
+			}else if (e.type == "mouseleave") {
+				obj.css("border-left","1px solid #e3e3e3")
+			};
+		});
+
+		var asjWidth = $('.asj').width();
+		$('.iMyInfoOk em').css('width',150-asjWidth);
+		//市区选择
+		$(".locationLayer").on("click","ul li a",function(e){
+			console.log($(e.target).html());
+			$(".locatinIcon").html($(e.target).html()+"市<i class='mykfw floatRight'></i>");
+		})
+	})
+</script>
+</div>
+	</div>
+	<!-- 欢迎来到快学历 -->
+	<!-- 侧边栏 -->
+	<ul class="overflowhidden navSidebars headerOverflowInherit">
+	<li style="border-top: 1px solid #dddddd;" class="li-1">
+		<a href="javascript:void(0);" class="mx-a-1">
+			<i class="gwc"></i>
+			<div class="mx-green">在线咨询</div>
+		</a>
+	</li>
+	<li>
+		<a href="/cart/info.html" id="myCartInfo">
+			<i class="wyts"></i>
+			<div>购物车</div>
+					</a>
+	</li>
+	<li class="complainLe" style="display:none;border-radius:0 0 0 6px;">
+		<a href="javascript:;" class="a-4">
+			<i class="fhdb fhdbClick"></i>
+			<div>返回顶部</div>
+		</a>
+	</li>
+</ul>
+<script type="text/javascript" src="Js/rightfloat.js"></script>
+
+
+	<!-- 新的侧边栏 -->
+	
+	<script type="text/javascript" src="Js/kfwnav.js"></script>
+<link href="Css/kfwpop.css" rel="stylesheet">
+<link rel="stylesheet" href="Css/home_index.css"/>
+<style type="text/css">
+	body{background: #fff;}
+</style>
+<script type="text/javascript" src="Js/jquery.validate.js"></script>
+
+<!-- 导航 -->
+<div class="main bgWhite bordere5 headerOverflowInherit" style="z-index: 10;">
+	<!-- logo -->
+	<div class="minwidth kfwLogo">
+		<a class="floatLeft" href="index.html">
+						<img src="Image/LOGO1.png" alt="快学历">
+					</a>
+		<div class="logo-sub">购物车</div>
+			</div>
+	<!-- logo -->
+</div>
+<!-- 导航 -->
+<div class="main greyf5f5f5">
+	<!-- 购物车 -->
+		<div class="minwidth">
+		<div class="cart-empty">
+			<h3>您的购物车还是空的！</h3>
+			<p class="tips">登录后将显示您之前加入的商品</p>
+			<div class="btn">
+				<a href="login.html" id="ejectLogin" class="inlineBlock butBlue">立即登录</a>
+				<a href="index.html" class="inlineBlock goShopping">马上去购物</a>
+			</div>
+		</div>
+	</div>
+	<div class="minwidth">
+	</div>
+</div>
+
+<script>
+var init={
+	mobile_bind:'reg_mobile',
+	send_type:'registersend',
+	get_mobile : function(){
+		mobileobj = getCode.obj.parents('ul').find('li:first input');
+		getCode.mobile = mobileobj;
+		return mobileobj; 
+	},
+	wrong_mobile:function(){
+		$(".mobiletishi").hide();
+		if(getCode.mobile.parent().next('div').html())
+		{
+			getCode.mobile.parent().next('div').html('请输入手机号码');
+			return false;
+		}
+		getCode.mobile.parent().after('<div class="register-li-1 tishi-div-1" for="reg_mobile" generated="true" style="display:block">请输入手机号码</div>');
+	},
+	wrong_mobile_format:function(){
+		$(".mobiletishi").hide();
+		if(getCode.mobile.parent().next('div').html())
+		{
+			getCode.mobile.parent().next('div').html('手机号码格式不正确');
+			return false;
+		}
+		getCode.mobile.parent().after('<div class="register-li-1 tishi-div-1" for="reg_mobile" generated="true" style="display:block">手机号码格式不正确</div>');
+	},
+	wrong_mobile_exists:function(){
+		$(".mobiletishi").hide();
+		if(getCode.mobile.parent().next('div').html())
+		{
+			getCode.mobile.parent().next('div').html('此号已注册，请<a href="javascript:;" style="color: #00c9ff" id="toLogin"> 登录 </a>或<a href="/communal/forgetpass.html" style="color: #00c9ff"> 找回密码 </a>');
+			return false;
+		}
+		getCode.mobile.parent().after('<div class="register-li-1 tishi-div-1" for="reg_mobile" generated="true" style="display:block">此号已注册，请<a href="javascript:;" style="color: #00c9ff"  id="toLogin"> 登录 </a>或<a href="/communal/forgetpass.html" style="color: #00c9ff"> 找回密码 </a></div>');
+	},
+	show_button_after:'已发送，1分钟后可重新获取。',
+	check_exists:true,
+	before_send:function(){
+		if(!getCode.canSend){
+			return false;
+		}
+		var re = false;
+		if(!$("#find_code").val())
+		{
+			$(".reimg").click();
+			$(".codetishi").hide();
+			if(!$("#find_code").parent().next('div').html())
+			{
+				$("#find_code").parent().after('<div class="register-li-1 tishi-div-1" for="find_code" generated="true" style="display:block">验证码不正确或已过期</div>');
+			}
+			return false
+		}
+		$.ajax({
+			url:'/communal/checkverifycode',
+			data:{
+				code:$("#find_code").val()
+			},
+			async:false,
+			success:function(ret){
+				if(!ret.ret){
+					$(".reimg").click();
+					$('.notSee').click();
+					$(".codetishi").hide();
+					if(!$("#find_code").parent().next('div').html())
+					{
+						$("#find_code").parent().after('<div class="register-li-1 tishi-div-1" for="reg_mobile" generated="true" style="display:block">验证码不正确或已过期</div>');
+					}
+					else
+					{
+						$("#find_code").parent().next('div').show();
+					}
+					re = false;
+				}
+				else{
+					$(".codetishi").show();
+					$("#find_code").parent().next('div').remove();
+					re = true;
+				}
+			}
+		});
+		return re;
+	},
+	send_to_msg_code:function (mobile)
+	{
+		getCode.moveNotice();
+		//var sendtype = undefined == typeof(SEND_TYPE) ? 'login' : SEND_TYPE;
+		var sendtype = getCode.init.send_type;
+		var mobile = mobile || '';
+		var data = {'mobile': mobile, 'type': sendtype, 'code' :$("#find_code").val()};
+		$.post("/communal/mobileauth", data, function(result)
+		{
+			if(result.ret)
+			{
+				getCode.msgSendToTip();
+			}
+			else if(sendtype == 'login'){
+				$('#mobile_not_register').html(result.msg);
+			}
+			else
+			{
+				alert(result.msg);
+			}
+		}, 'json');
+	}
+};
+
+function sendverifi(_this)
+{
+	$(_this).parent().children('div').hide();
+	getCode.setinit(init);
+	getCode.obj = $(_this);
+	getCode.getCodeClick();
+}
+$(function(){
+	getCode.setinit(init);
+})
+</script>
+<script type="text/javascript"  src="Js/mobileauth.js?version=08184d85888e248911c32480840b6764"></script>
+<script>
+
+	function huodejiaodian(obj)
+	{
+		$(obj).parents('.register-li').find('label').addClass("register-li-span");
+
+		var aa = $(obj).parent().parent();
+		aa.children("div.register-li-3").hide();
+	}
+
+	function shiqujiaodian(obj,obj1)
+	{
+		//var aa = $(obj).parent().parent();
+		if('' == $(obj).val())
+		{
+			$("." + obj1).show();
+		}
+		else
+		{
+			//aa.children("div.register-li-1").html("");
+			$("." + obj1).hide();
+		}
+	}
+
+	function huodewenan(obj,obj1,obj2,obj3)
+	{
+//		$(obj).parents('.register-li').find('label').addClass("register-li-span");
+
+		var aa = $(obj).parent().parent();
+		//alert(aa.children("div." + obj2).html());
+		aa.children("div." + obj1).hide();
+		aa.children("div." + obj3).hide();
+		aa.children("div." + obj2).show();
+		aa.children("div.register-li-3").hide();
+		aa.children('label').animate({left:'-90px'},200);
+		aa.children(".verCodePrompt").remove();
+
+		if($(obj).attr('id') == 'rpassword'){
+			obj.type = 'password'
+		}
+	}
+
+	function shiquwenan(obj,obj1,obj2,obj3,flog)
+	{
+		var aa = $(obj).parent().parent();
+		aa.children("div." + obj2).hide();
+		if('' == $(obj).val())
+		{
+			aa.children("div." + obj1).hide();
+			aa.children("div." + obj3).show();
+		}
+	}
+
+//	function translateXX(obj){
+//		$(obj).parents('.register-li').find('label').addClass("register-li-span");
+//	}
+	
+</script>
+
+<!--登录注册框-->
+
+<script type="text/javascript" src="Js/shopping.js"></script>
+
+<script>
+	$(function(){
+		// 获取优惠券
+		
+		// 初始化优惠券控件
+		$("#haveCoupon").val(0);
+		$("#couponCode").val('');
+		$("input[type='checkbox'][name='coupon[id]']").each(function(){
+			$(this).removeAttr('checked');
+		});
+		
+		// 优惠券只能选一个
+		$("body").on('click', "input[type='checkbox'][name='coupon[id]']", function (){
+			if ($(this).attr('checked'))
+			{
+				$("input[type='checkbox'][name='coupon[id]']").each(function (){
+					$(this).removeAttr('checked');
+				});
+				
+				$(this).attr('checked', 'true');
+			}
+			changeMoney();
+		});
+
+		// 数量input框失去焦点，即不通过+-修改数量
+		$(".t-productNum").blur(function(){
+			var num = $(this).val();
+			var productid = $(this).attr('data-productid');
+			if(productid != 147 && num > 200)
+			{
+				Base.alert('<p>购买数量不能超过200</p>', '提示', '200', '100');
+				$(this).val(200);
+			}
+			if (changeCart($(this).attr('category'), $(this).val(), $(this).attr('key')))
+			{
+				changeMoney();
+			}
+		});
+
+		// 提交表单，去支付
+		$("#orderButton").click(function (){
+			 //submitForm("/orders/add.html", 'cartForm');
+
+			 $("#orderButton").attr("id","");
+			 var urlkey = $(this).data("urlkey");
+			 var param = urlkey ? "/key/" + urlkey : "";
+			 var url = '/orders/add' + param;
+			 addOrder(url, 'cartForm');//不使用错误提示
+		});
+
+		//呼出快速登录框
+		$("#ejectLogin").on("click",function(){
+			Base.alert($("#quReg1").val(), '登录 ', 825, 365);
+		});
+
+		// 发票提示
+		$(".invoiceTip").hover(function(){
+			$(this).find(".invoiceInner").show();
+		},function(){
+			$(this).find(".invoiceInner").hide();
+		})
+
+	});
+
+	function addOrder(url, formId) {
+		$.post(url, $("#" + formId).serialize(), function(result)
+		{
+			isSubmit = false;
+
+			if (true == result.ret)
+			{
+				if ('undefined' != typeof(result.data.url) && '' != result.data.url)
+				{
+					window.location.href = result.data.url;
+				}
+			}
+			else
+			{
+				// 未登录则弹出登录框
+				if ('undefined' != typeof(result.code) && 10001 == result.code && $("#quReg").length > 0)
+				{
+					showLoginWindow();
+					return ;
+				}
+				if (5000 == result.code)
+				{
+					location.reload();
+				}
+				Base.alertTime(result.msg);
+			}
+		});
+	}
+
+	// 优惠券金额
+	var couponMoney = 0;
+
+	/**
+	 * 取消使用优惠券
+	 * @author nyl
+	 */
+	function cancelCoupon()
+	{
+		$("#haveCoupon").val(0);
+		$('#couponCode').val('');
+		$("input[type='checkbox'][name='coupon[id]']").each(function(){
+			$(this).removeAttr('checked');
+		});
+		$("#couponHtml").hide();
+		$("#couponTitle").removeClass("active");
+	}
+
+	/**
+	 * 使用优惠券
+	 * @author nyl
+	 * @param integer type 1为优惠码，2为优惠券
+	 */
+	function useCoupon(type)
+	{
+		// 使用优惠码
+		if (1 == type)
+		{
+			var code = $("#couponCode").val();
+			if (code == '')
+			{
+				Base.poptip('请输入优惠码', 'couponCode');
+				return ;
+			}
+			submitForm('/cart/checkcouponcode', 'cartForm', function(result){
+				if (result.ret)
+				{
+					useCouponAction(result.data.title, result.data.money, result.data.couponMoneyTotal);
+				}
+				else
+				{
+					Base.alertTime(result.msg);
+				}
+			});
+		}
+		// 使用优惠券
+		else if (2 == type)
+		{
+			if (0 == $("input[type='checkbox'][name='coupon[id]']:checked").length)
+			{
+				Base.alertTime('请选择优惠券');
+				return ;
+			}
+			
+			var cSelect = $("input[type='checkbox'][name='coupon[id]']:checked");
+			useCouponAction(cSelect.attr('title'), cSelect.attr('money'), cSelect.attr('couponmoneytotal'));
+		}
+	}
+
+	/**
+	 * 使用优惠券相关操作
+	 * @author nyl
+	 * @param string title 优惠券名称
+	 * @param float money 优惠券金额
+	 */
+	function useCouponAction(title, money, couponMoneyTotal)
+	{
+		if ('undefined' != typeof (couponMoneyTotal) && parseFloat(couponMoneyTotal) > 0)
+		{
+			money = parseFloat(money) > parseFloat(couponMoneyTotal) ? couponMoneyTotal : money;
+		}
+		
+		$("#haveCoupon").val(1);
+		$("#couponTitle").addClass('active').html('<i></i>使用代金券(' + title + ')');
+		$("#couponHtml").hide();
+		$("#couponTitle").removeClass("active");
+		couponMoney = money;
+		$("#couponPrice").html(couponMoney + '元');
+		changeMoney();
+		$("#couponTitle").click(function(){
+			$(this).html('<i></i>使用代金券');
+			$("#haveCoupon").val(0);
+			couponMoney = 0;
+			$("#couponPrice").html(couponMoney + '元');
+			changeMoney();
+		});
+	}
+
+	/**
+	 * 重新计算价格
+	 * @author nyl
+	 */
+	function changeMoney()
+	{
+		var totalPrice = 0;
+		var vTotalPrice = 0;
+		$(".t-productNum").each(function(){
+			var pId = $(this).attr('key');
+			var type = $(this).attr('category');
+			var pPrice = $(this).attr('pprice');
+			var vPrice = $(this).attr('vprice');
+			var pNum = parseInt($(this).val());
+			
+			var pTotalPrice = pNum * pPrice;
+						
+			vTotalPrice += (vPrice * pNum);
+			
+			pTotalPrice = pTotalPrice.toString().replace('.00', '');
+			pTotalPrice = parseFloat(pTotalPrice).toFixed(2);
+			
+			$("#" + type + "TotalPrice_" + pId).html(pTotalPrice + '元');
+			pTotalPrice = parseFloat(pTotalPrice);
+			totalPrice += pNum * pPrice;
+			if (type == 'package')
+			{
+				$(".t-pList-" + pId).each(function(){
+					$(this).html(pNum);
+					var flag = $(this).attr('flag');
+					var price = $(this).attr('pprice');
+					var vprice = $(this).attr('vprice');
+					$("#ppList_" + flag).html((price - vprice) * pNum);
+				});
+			}
+		});
+		
+		vTotalPrice = vTotalPrice.toString().replace('.00', '');
+		vTotalPrice = parseFloat(vTotalPrice).toFixed(2);
+		totalPrice = parseFloat(totalPrice).toFixed(2);
+		totalPrice = totalPrice.toString().replace('.00', '');
+		$("#totalPrice").html(totalPrice + '元');
+		totalPrice = parseFloat(totalPrice);
+		totalPrice -= couponMoney;
+		
+				
+		totalPrice = parseFloat(totalPrice).toFixed(2);
+		totalPrice = totalPrice.toString().replace('.00', '');
+		
+				$('#vipPrice').html(vTotalPrice);
+				if (totalPrice < 0)
+		{
+			totalPrice = 0;
+		}
+		$("#totalPayPrice").html(totalPrice + '元');
+	}
+
+	/**
+	 * 修改数量
+	 * @author nyl
+	 * @param string type 值为product, pay, package
+	 * @param integer num 调整数量 -1,1
+	 * @param integer pId 
+	 */
+	function changeNum(type, num, pId)
+	{
+		var domId = "#" + type + "Num_" + pId;
+		var pNum = parseInt($(domId).val());
+		var productid = $(domId).attr('data-productid');
+		pNum += num;
+		if (pNum <= 0)
+		{
+			return false;
+		}
+		if (productid != 147 && pNum > 200)
+		{
+			Base.alert('<p>购买数量不能超过200</p>', '提示', '200', '100');
+			return false;
+		}
+		$(domId).val(pNum);
+		if (pNum == 1)
+		{
+			$("#" + type + "Reduce_" + pId).addClass('notChoose');
+		}
+		else
+		{
+			$("#" + type + "Reduce_" + pId).removeClass('notChoose');
+		}
+		if (changeCart(type, pNum, pId))
+		{
+			changeMoney();
+		}
+	}
+
+	/**
+	 * 修改购物车
+	 * @author nyl
+	 * @param string type 值为：product, pay, package
+	 * @param integer  num
+	 * @param integer pId 
+	 */
+	function changeCart(type, num, pId)
+	{
+		/*
+		var url = '/cart/change/type/' + type + '/key/' + pId + '/num/' + num;
+		$.getJSON(url, function(rt){
+			if (!rt.ret)
+			{
+				Base.alertTime(result.msg);
+			}
+			return ;
+		});*/
+		var result;
+		
+		$.ajax({
+			type: "GET",
+			async: false,
+			url: '/cart/change/type/' + type + '/key/' + pId + '/num/' + num,
+			data: "",
+			dataType: "JSON",
+			success: function(rt)
+			{
+				if (!rt.ret)
+				{
+					Base.alert('<p>' + rt.msg + '</p>', '提示', '200', '100');
+				}
+				result = rt.ret;
+			}
+		});
+		return result;
+	}
+
+</script>
+
+<!-- 聚效统计代码 -->
+<script type="text/javascript">
+// 我的购物车
+var _mvq = _mvq || [];
+//_mvq.push(['$setAccount', 'm-108577-0']);
+//
+//
+//_mvq.push(['$setGeneral', 'cartview', '', /*用户名*/ '', /*用户id*/ '']);
+//_mvq.push(['$logConversion']);
+//_mvq.push(['$addItem', '', /*商品id*/ '', '','']);
+//_mvq.push(['$logData']);
+
+//填写核对订单信息
+//var _mvq = _mvq || [];
+//_mvq.push(['$setAccount', 'm-108577-0']);
+//
+//_mvq.push(['$setGeneral', 'checkout', '', /*用户名*/ '', /*用户id*/ '']);
+//_mvq.push(['$logConversion']);
+//_mvq.push(['$addCartGoods',/*商品id*/ '',/*商品名称*/ '', /*商品价格*/ '', /*商品数量*/ '']);
+//_mvq.push(['$logData']);
+</script>
+		<!-- buyfooter -->
+		<div class="main bgWhite">
+			<div class="minwidth">
+				<div class="minwidthauto indexBorderB">
+					<ul class="index-fo-info overflowhidden">
+						<li class="firstLi">
+							<i class="zz"></i>
+							<div class="textImgSeparation">
+								<h3>资质认证</h3>
+								<span>服务商100%实名审核认证</span>
+							</div>
+						</li>
+						<li>
+							<i class="zf"></i>
+							<div class="textImgSeparation">
+								<h3>支付安全</h3>
+								<span>明码标价支付及信息安全</span>
+							</div>
+						</li>
+						<li>
+							<i class="fw"></i>
+							<div class="textImgSeparation">
+								<h3>专人服务</h3>
+								<span>服务全程进行信息化监控</span>
+							</div>
+						</li>
+						<li>
+							<i class="sh"></i>
+							<div class="textImgSeparation">
+								<h3>售后无忧</h3>
+								<span>服务出问题客服经理全程跟进</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- footer -->
+			<div style="float: left;height: auto;min-width: 1180px;overflow: hidden;position: relative;width: 100%;">
+				<div style="height: auto;margin: 0 auto;overflow: hidden;width: 1180px;">
+					<p style="color: #666;font-size: 12px;line-height: 1;margin: 24px 0;text-align: center;">Copyright © 2011-2015 www.xueli985.com All Rights Reserved &nbsp; &nbsp;技术支持：北京维思天下教育科技有限公司&nbsp;京ICP备12002978号</p>
+				</div>
+			</div>
+			<!-- footer -->
+		</div>
+				
+	</body>
+</html>
