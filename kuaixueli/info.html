@@ -148,7 +148,7 @@
 <div class="main greyf5f5f5">
 	
 	<!-- 购物车 空 -->
-		<div class="minwidth">
+		<!--<div class="minwidth">
 		<div class="cart-empty">
 			<h3>您的购物车还是空的！</h3>
 			<p class="tips">登录后将显示您之前加入的商品</p>
@@ -157,7 +157,7 @@
 				<a href="index.html" class="inlineBlock goShopping">马上去购物</a>
 			</div>
 		</div>
-	</div>
+	</div>-->
 	<!--购物车 有东西-->
 	<div class="minwidth">
 		<form id="cartForm" noenter="1">
@@ -184,14 +184,14 @@
 																												
 							<ol>
 								<li class="goods">
-									<img class="floatLeft marL40 imgW50" src="http://cdn.kuaifawu.com/product/cart/165.png" alt="">
+									<img class="floatLeft marL40 imgW50" src="Image/165.png" alt="服务图片">
 									<div class="textImgSeparation goods-text">
 										<div>
-											<span>合伙企业注册</span>
+											<span>北京人民大学</span>
 										</div>
 										<div class="area">
 											<em>地区：</em>
-											<span>上海-金山区</span>
+											<span>北京</span>
 										</div>
 																			</div>
 								</li>
@@ -201,15 +201,15 @@
 								<li class="shopp-num">
 									<div class="numAddSubtract overflowhidden">
 										<a class="subtract " href="javascript:;" id="productReduce_0" onclick="changeNum('product', -1, 0);">-</a>
-										<input type="text" value="3" onkeyup="numberFilter(this);" name="productnums[0]" id="productNum_0" style="width:40px;" class="t-productNum" category="product" key="0" pprice="1399" vprice="0" data-productid="165">
+										<input type="text" value="1" onkeyup="numberFilter(this);" name="productnums[0]" id="productNum_0" style="width:40px;" class="t-productNum" category="product" key="0" pprice="1399" vprice="0" data-productid="165">
 										<a href="javascript:;" onclick="changeNum('product', 1, 0);">+</a>
 									</div>
 								</li>
 								<li class="shopp-subtotal">
-									<span id="productTotalPrice_0">4197元</span>
+									<span id="productTotalPrice_0">8888元</span>
 																	</li>
 								<li class="operation">
-									<a href="/cart/delete/type/product/key/0.html">删除</a>
+									<a href="javascript:void(0)">删除</a>
 									<!--<span>x</span>-->
 								</li>
 							</ol>
@@ -248,7 +248,7 @@
 				</ul>
 				<div class="marT30 floatRight">
 					<a class="butpadding64 inlineBlock floatRight butRed" href="html/pay.html" id="orderButton" data-urlkey="">去结账</a>
-					<a class="butpadding21 inlineBlock floatRight butWhiteGreyborder marR20" href="/">继续购物</a>
+					<a class="butpadding21 inlineBlock floatRight butWhiteGreyborder marR20" href="index.html">继续逛逛</a>
 				</div>
 				<!-- 如何获取发票 -->
 				<div class="invoiceWrap">
@@ -384,11 +384,9 @@ function sendverifi(_this)
 	getCode.obj = $(_this);
 	getCode.getCodeClick();
 }
-$(function(){
-	getCode.setinit(init);
-})
+
 </script>
-<script type="text/javascript"  src="Js/mobileauth.js?version=08184d85888e248911c32480840b6764"></script>
+
 <script>
 
 	function huodejiaodian(obj)
@@ -448,346 +446,8 @@ $(function(){
 	
 </script>
 
-<!--登录注册框-->
 
-<script type="text/javascript" src="Js/shopping.js"></script>
 
-<script>
-	$(function(){
-		// 获取优惠券
-		
-		// 初始化优惠券控件
-		$("#haveCoupon").val(0);
-		$("#couponCode").val('');
-		$("input[type='checkbox'][name='coupon[id]']").each(function(){
-			$(this).removeAttr('checked');
-		});
-		
-		// 优惠券只能选一个
-		$("body").on('click', "input[type='checkbox'][name='coupon[id]']", function (){
-			if ($(this).attr('checked'))
-			{
-				$("input[type='checkbox'][name='coupon[id]']").each(function (){
-					$(this).removeAttr('checked');
-				});
-				
-				$(this).attr('checked', 'true');
-			}
-			changeMoney();
-		});
-
-		// 数量input框失去焦点，即不通过+-修改数量
-		$(".t-productNum").blur(function(){
-			var num = $(this).val();
-			var productid = $(this).attr('data-productid');
-			if(productid != 147 && num > 200)
-			{
-				Base.alert('<p>购买数量不能超过200</p>', '提示', '200', '100');
-				$(this).val(200);
-			}
-			if (changeCart($(this).attr('category'), $(this).val(), $(this).attr('key')))
-			{
-				changeMoney();
-			}
-		});
-
-		// 提交表单，去支付
-		$("#orderButton").click(function (){
-			 //submitForm("/orders/add.html", 'cartForm');
-
-			 $("#orderButton").attr("id","");
-			 var urlkey = $(this).data("urlkey");
-			 var param = urlkey ? "/key/" + urlkey : "";
-			 var url = '/orders/add' + param;
-			 addOrder(url, 'cartForm');//不使用错误提示
-		});
-
-		//呼出快速登录框
-		$("#ejectLogin").on("click",function(){
-			Base.alert($("#quReg1").val(), '登录 ', 825, 365);
-		});
-
-		// 发票提示
-		$(".invoiceTip").hover(function(){
-			$(this).find(".invoiceInner").show();
-		},function(){
-			$(this).find(".invoiceInner").hide();
-		})
-
-	});
-
-	function addOrder(url, formId) {
-		$.post(url, $("#" + formId).serialize(), function(result)
-		{
-			isSubmit = false;
-
-			if (true == result.ret)
-			{
-				if ('undefined' != typeof(result.data.url) && '' != result.data.url)
-				{
-					window.location.href = result.data.url;
-				}
-			}
-			else
-			{
-				// 未登录则弹出登录框
-				if ('undefined' != typeof(result.code) && 10001 == result.code && $("#quReg").length > 0)
-				{
-					showLoginWindow();
-					return ;
-				}
-				if (5000 == result.code)
-				{
-					location.reload();
-				}
-				Base.alertTime(result.msg);
-			}
-		});
-	}
-
-	// 优惠券金额
-	var couponMoney = 0;
-
-	/**
-	 * 取消使用优惠券
-	 * @author nyl
-	 */
-	function cancelCoupon()
-	{
-		$("#haveCoupon").val(0);
-		$('#couponCode').val('');
-		$("input[type='checkbox'][name='coupon[id]']").each(function(){
-			$(this).removeAttr('checked');
-		});
-		$("#couponHtml").hide();
-		$("#couponTitle").removeClass("active");
-	}
-
-	/**
-	 * 使用优惠券
-	 * @author nyl
-	 * @param integer type 1为优惠码，2为优惠券
-	 */
-	function useCoupon(type)
-	{
-		// 使用优惠码
-		if (1 == type)
-		{
-			var code = $("#couponCode").val();
-			if (code == '')
-			{
-				Base.poptip('请输入优惠码', 'couponCode');
-				return ;
-			}
-			submitForm('/cart/checkcouponcode', 'cartForm', function(result){
-				if (result.ret)
-				{
-					useCouponAction(result.data.title, result.data.money, result.data.couponMoneyTotal);
-				}
-				else
-				{
-					Base.alertTime(result.msg);
-				}
-			});
-		}
-		// 使用优惠券
-		else if (2 == type)
-		{
-			if (0 == $("input[type='checkbox'][name='coupon[id]']:checked").length)
-			{
-				Base.alertTime('请选择优惠券');
-				return ;
-			}
-			
-			var cSelect = $("input[type='checkbox'][name='coupon[id]']:checked");
-			useCouponAction(cSelect.attr('title'), cSelect.attr('money'), cSelect.attr('couponmoneytotal'));
-		}
-	}
-
-	/**
-	 * 使用优惠券相关操作
-	 * @author nyl
-	 * @param string title 优惠券名称
-	 * @param float money 优惠券金额
-	 */
-	function useCouponAction(title, money, couponMoneyTotal)
-	{
-		if ('undefined' != typeof (couponMoneyTotal) && parseFloat(couponMoneyTotal) > 0)
-		{
-			money = parseFloat(money) > parseFloat(couponMoneyTotal) ? couponMoneyTotal : money;
-		}
-		
-		$("#haveCoupon").val(1);
-		$("#couponTitle").addClass('active').html('<i></i>使用代金券(' + title + ')');
-		$("#couponHtml").hide();
-		$("#couponTitle").removeClass("active");
-		couponMoney = money;
-		$("#couponPrice").html(couponMoney + '元');
-		changeMoney();
-		$("#couponTitle").click(function(){
-			$(this).html('<i></i>使用代金券');
-			$("#haveCoupon").val(0);
-			couponMoney = 0;
-			$("#couponPrice").html(couponMoney + '元');
-			changeMoney();
-		});
-	}
-
-	/**
-	 * 重新计算价格
-	 * @author nyl
-	 */
-	function changeMoney()
-	{
-		var totalPrice = 0;
-		var vTotalPrice = 0;
-		$(".t-productNum").each(function(){
-			var pId = $(this).attr('key');
-			var type = $(this).attr('category');
-			var pPrice = $(this).attr('pprice');
-			var vPrice = $(this).attr('vprice');
-			var pNum = parseInt($(this).val());
-			
-			var pTotalPrice = pNum * pPrice;
-						
-			vTotalPrice += (vPrice * pNum);
-			
-			pTotalPrice = pTotalPrice.toString().replace('.00', '');
-			pTotalPrice = parseFloat(pTotalPrice).toFixed(2);
-			
-			$("#" + type + "TotalPrice_" + pId).html(pTotalPrice + '元');
-			pTotalPrice = parseFloat(pTotalPrice);
-			totalPrice += pNum * pPrice;
-			if (type == 'package')
-			{
-				$(".t-pList-" + pId).each(function(){
-					$(this).html(pNum);
-					var flag = $(this).attr('flag');
-					var price = $(this).attr('pprice');
-					var vprice = $(this).attr('vprice');
-					$("#ppList_" + flag).html((price - vprice) * pNum);
-				});
-			}
-		});
-		
-		vTotalPrice = vTotalPrice.toString().replace('.00', '');
-		vTotalPrice = parseFloat(vTotalPrice).toFixed(2);
-		totalPrice = parseFloat(totalPrice).toFixed(2);
-		totalPrice = totalPrice.toString().replace('.00', '');
-		$("#totalPrice").html(totalPrice + '元');
-		totalPrice = parseFloat(totalPrice);
-		totalPrice -= couponMoney;
-		
-				
-		totalPrice = parseFloat(totalPrice).toFixed(2);
-		totalPrice = totalPrice.toString().replace('.00', '');
-		
-				$('#vipPrice').html(vTotalPrice);
-				if (totalPrice < 0)
-		{
-			totalPrice = 0;
-		}
-		$("#totalPayPrice").html(totalPrice + '元');
-	}
-
-	/**
-	 * 修改数量
-	 * @author nyl
-	 * @param string type 值为product, pay, package
-	 * @param integer num 调整数量 -1,1
-	 * @param integer pId 
-	 */
-	function changeNum(type, num, pId)
-	{
-		var domId = "#" + type + "Num_" + pId;
-		var pNum = parseInt($(domId).val());
-		var productid = $(domId).attr('data-productid');
-		pNum += num;
-		if (pNum <= 0)
-		{
-			return false;
-		}
-		if (productid != 147 && pNum > 200)
-		{
-			Base.alert('<p>购买数量不能超过200</p>', '提示', '200', '100');
-			return false;
-		}
-		$(domId).val(pNum);
-		if (pNum == 1)
-		{
-			$("#" + type + "Reduce_" + pId).addClass('notChoose');
-		}
-		else
-		{
-			$("#" + type + "Reduce_" + pId).removeClass('notChoose');
-		}
-		if (changeCart(type, pNum, pId))
-		{
-			changeMoney();
-		}
-	}
-
-	/**
-	 * 修改购物车
-	 * @author nyl
-	 * @param string type 值为：product, pay, package
-	 * @param integer  num
-	 * @param integer pId 
-	 */
-	function changeCart(type, num, pId)
-	{
-		/*
-		var url = '/cart/change/type/' + type + '/key/' + pId + '/num/' + num;
-		$.getJSON(url, function(rt){
-			if (!rt.ret)
-			{
-				Base.alertTime(result.msg);
-			}
-			return ;
-		});*/
-		var result;
-		
-		$.ajax({
-			type: "GET",
-			async: false,
-			url: '/cart/change/type/' + type + '/key/' + pId + '/num/' + num,
-			data: "",
-			dataType: "JSON",
-			success: function(rt)
-			{
-				if (!rt.ret)
-				{
-					Base.alert('<p>' + rt.msg + '</p>', '提示', '200', '100');
-				}
-				result = rt.ret;
-			}
-		});
-		return result;
-	}
-
-</script>
-
-<!-- 聚效统计代码 -->
-<script type="text/javascript">
-// 我的购物车
-var _mvq = _mvq || [];
-//_mvq.push(['$setAccount', 'm-108577-0']);
-//
-//
-//_mvq.push(['$setGeneral', 'cartview', '', /*用户名*/ '', /*用户id*/ '']);
-//_mvq.push(['$logConversion']);
-//_mvq.push(['$addItem', '', /*商品id*/ '', '','']);
-//_mvq.push(['$logData']);
-
-//填写核对订单信息
-//var _mvq = _mvq || [];
-//_mvq.push(['$setAccount', 'm-108577-0']);
-//
-//_mvq.push(['$setGeneral', 'checkout', '', /*用户名*/ '', /*用户id*/ '']);
-//_mvq.push(['$logConversion']);
-//_mvq.push(['$addCartGoods',/*商品id*/ '',/*商品名称*/ '', /*商品价格*/ '', /*商品数量*/ '']);
-//_mvq.push(['$logData']);
-</script>
 		<!-- buyfooter -->
 		<div class="main bgWhite">
 			<div class="minwidth">
@@ -832,6 +492,16 @@ var _mvq = _mvq || [];
 			</div>
 			<!-- footer -->
 		</div>
-				
+		<script type="text/javascript">
+			$(function(){ 
+				$(".invoiceTip").hover(
+					function(){
+						console.log(1);
+						$(this).find(".invoiceInner").show();
+					},function(){
+						$(this).find(".invoiceInner").hide();
+					});
+			});
+		</script>	
 	</body>
 </html>
