@@ -25,90 +25,16 @@
 	<script type="text/javascript" src="Js/utm.js"></script>
 	
 <body>
-	<!-- 欢迎来到快学历 -->
-	<div class="main greyf5f5f5 headerOverflowInherit">
-		<div class="minwidth welcomeKfw headerOverflowInherit" id='loginbar'>
-			<ul class="overflowhidden floatLeft headerOverflowInherit" >
-		<li class="navLocation">
-			<a href="javascript:;" class="locatinIcon">
-				<i class="mykfw floatRight"></i>北京市</a>
-			<div class="locationLayer">
-				<em></em>
-				<ul>
-					<li><a href="javascript:void(0)">北京</a></li>
-					<li><a href="javascript:void(0)">上海</a></li>
-					<li><a href="javascript:void(0)" >广州</a></li>
-					<li><a href="javascript:void(0)" >深圳</a></li>
-					<li><a href="javascript:void(0)">南京</a></li>
-					<li><a href="javascript:void(0)">杭州</a></li>
-					<li><a href="javascript:void(0)">宁波</a></li>
-					<li><a href="javascript:void(0)">苏州</a></li>
-					<li><a href="javascript:void(0)">成都</a></li>
-					<li><a href="javascript:void(0)">天津</a></li>
-					<li><a href="javascript:void(0)">厦门</a></li>
-					<li><a href="javascript:void(0)">重庆</a></li>
-					<li><a href="javascript:void(0)">武汉</a></li>
-					<li><a href="javascript:void(0)">西安</a></li>
-					<li><a href="javascript:void(0)">全国</a></li>
-				</ul>
-			</div>
-		</li>
-	</ul>
-	<ul class="overflowhidden floatRight headerOverflowInherit">
-		<li><a class="noBorder" href="login.html">登录</a></li>
-		<li><a href="register.html">免费注册</a></li>
-		<li><a href="login.html">我的订单</a></li>
-		<li><a class="welcome1" href="info.html"><i class="gw floatLeft"></i>购物车<em>0</em>件</a></li>
-		<li><a href="#" target="_blank">院校入驻</a></li>
-		<li><a href="#" target="_blank" style="color:#00a5d5;">助学机构入驻</a></li>
-		<li class="asj app">
-			<a href="#">
-				<i class="sj floatLeft"></i><i class="jt floatRight"></i>移动应用
-			</a>
-			<div class="welcomeKfwShow aimationKfw">
-				<em></em>
-				<img src="Image/Home_index/kuaixuelierweima.png" alt="微信图片">
-				<h4>关注快学历官方微信</h4>
-				<a class="butTgreen padding14" href="#">更多移动应用</a>
-			</div>
-		</li>
-	</ul>
-<script type="text/javascript">
-	$(function(){
-		//欢迎来到快学历中去样式
-		$(".asj").on("mouseenter mouseleave",function(e){
-
-			var obj = $(this).next("li").children("a");
-
-			if (e.type == "mouseenter") {
-				obj.css("border","none")
-			}else if (e.type == "mouseleave") {
-				obj.css("border-left","1px solid #e3e3e3")
-			};
-		});
-
-		var asjWidth = $('.asj').width();
-		$('.iMyInfoOk em').css('width',150-asjWidth);
-		//市区选择
-		$(".locationLayer").on("click","ul li a",function(e){
-			console.log($(e.target).html());
-			$(".locatinIcon").html($(e.target).html()+"市<i class='mykfw floatRight'></i>");
-		})
-	})
-</script>
-</div>
-	</div>
-	<!-- 欢迎来到快学历 -->
 	<!-- 侧边栏 -->
 	<ul class="overflowhidden navSidebars headerOverflowInherit">
 	<li style="border-top: 1px solid #dddddd;" class="li-1">
-		<a href="javascript:void(0);" class="mx-a-1">
+		<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=99626428&site=qq&menu=yes" class="mx-a-1" rel="nofollow">
 			<i class="gwc"></i>
 			<div class="mx-green">在线咨询</div>
 		</a>
 	</li>
 	<li>
-		<a href="/cart/info.html" id="myCartInfo">
+		<a href="javascript:viod(0)" id="myCartInfo">
 			<i class="wyts"></i>
 			<div>购物车</div>
 					</a>
@@ -200,9 +126,9 @@
 								</li>
 								<li class="shopp-num">
 									<div class="numAddSubtract overflowhidden">
-										<a class="subtract " href="javascript:;" id="productReduce_0" onclick="changeNum('product', -1, 0);">-</a>
+										<a class="subtract " href="javascript:;" id="productReduce_0" >-</a>
 										<input type="text" value="1" onkeyup="numberFilter(this);" name="productnums[0]" id="productNum_0" style="width:40px;" class="t-productNum" category="product" key="0" pprice="1399" vprice="0" data-productid="165">
-										<a href="javascript:;" onclick="changeNum('product', 1, 0);">+</a>
+										<a href="javascript:;">+</a>
 									</div>
 								</li>
 								<li class="shopp-subtotal">
@@ -247,7 +173,7 @@
 					</li>
 				</ul>
 				<div class="marT30 floatRight">
-					<a class="butpadding64 inlineBlock floatRight butRed" href="html/pay.html" id="orderButton" data-urlkey="">去结账</a>
+					<a class="butpadding64 inlineBlock floatRight butRed" href="html/pay.html" id="orderButton" >去结账</a>
 					<a class="butpadding21 inlineBlock floatRight butWhiteGreyborder marR20" href="index.html">继续逛逛</a>
 				</div>
 				<!-- 如何获取发票 -->
@@ -266,232 +192,11 @@
 			
 		</div>
 		<!-- 购物车信息 -->
-	<input type="hidden" name="__hash__" value="ddc94d7572c88646fbada304ba7c131b_532b506724d22ae4045f3b1f17b0226e"></form>
+	<input type="hidden" name="" value=""></form>
 	</div>
 </div>
 
-<script>
-var init={
-	mobile_bind:'reg_mobile',
-	send_type:'registersend',
-	get_mobile : function(){
-		mobileobj = getCode.obj.parents('ul').find('li:first input');
-		getCode.mobile = mobileobj;
-		return mobileobj; 
-	},
-	wrong_mobile:function(){
-		$(".mobiletishi").hide();
-		if(getCode.mobile.parent().next('div').html())
-		{
-			getCode.mobile.parent().next('div').html('请输入手机号码');
-			return false;
-		}
-		getCode.mobile.parent().after('<div class="register-li-1 tishi-div-1" for="reg_mobile" generated="true" style="display:block">请输入手机号码</div>');
-	},
-	wrong_mobile_format:function(){
-		$(".mobiletishi").hide();
-		if(getCode.mobile.parent().next('div').html())
-		{
-			getCode.mobile.parent().next('div').html('手机号码格式不正确');
-			return false;
-		}
-		getCode.mobile.parent().after('<div class="register-li-1 tishi-div-1" for="reg_mobile" generated="true" style="display:block">手机号码格式不正确</div>');
-	},
-	wrong_mobile_exists:function(){
-		$(".mobiletishi").hide();
-		if(getCode.mobile.parent().next('div').html())
-		{
-			getCode.mobile.parent().next('div').html('此号已注册，请<a href="javascript:;" style="color: #00c9ff" id="toLogin"> 登录 </a>或<a href="/communal/forgetpass.html" style="color: #00c9ff"> 找回密码 </a>');
-			return false;
-		}
-		getCode.mobile.parent().after('<div class="register-li-1 tishi-div-1" for="reg_mobile" generated="true" style="display:block">此号已注册，请<a href="javascript:;" style="color: #00c9ff"  id="toLogin"> 登录 </a>或<a href="/communal/forgetpass.html" style="color: #00c9ff"> 找回密码 </a></div>');
-	},
-	show_button_after:'已发送，1分钟后可重新获取。',
-	check_exists:true,
-	before_send:function(){
-		if(!getCode.canSend){
-			return false;
-		}
-		var re = false;
-		if(!$("#find_code").val())
-		{
-			$(".reimg").click();
-			$(".codetishi").hide();
-			if(!$("#find_code").parent().next('div').html())
-			{
-				$("#find_code").parent().after('<div class="register-li-1 tishi-div-1" for="find_code" generated="true" style="display:block">验证码不正确或已过期</div>');
-			}
-			return false
-		}
-		$.ajax({
-			url:'/communal/checkverifycode',
-			data:{
-				code:$("#find_code").val()
-			},
-			async:false,
-			success:function(ret){
-				if(!ret.ret){
-					$(".reimg").click();
-					$('.notSee').click();
-					$(".codetishi").hide();
-					if(!$("#find_code").parent().next('div').html())
-					{
-						$("#find_code").parent().after('<div class="register-li-1 tishi-div-1" for="reg_mobile" generated="true" style="display:block">验证码不正确或已过期</div>');
-					}
-					else
-					{
-						$("#find_code").parent().next('div').show();
-					}
-					re = false;
-				}
-				else{
-					$(".codetishi").show();
-					$("#find_code").parent().next('div').remove();
-					re = true;
-				}
-			}
-		});
-		return re;
-	},
-	send_to_msg_code:function (mobile)
-	{
-		getCode.moveNotice();
-		//var sendtype = undefined == typeof(SEND_TYPE) ? 'login' : SEND_TYPE;
-		var sendtype = getCode.init.send_type;
-		var mobile = mobile || '';
-		var data = {'mobile': mobile, 'type': sendtype, 'code' :$("#find_code").val()};
-		$.post("/communal/mobileauth", data, function(result)
-		{
-			if(result.ret)
-			{
-				getCode.msgSendToTip();
-			}
-			else if(sendtype == 'login'){
-				$('#mobile_not_register').html(result.msg);
-			}
-			else
-			{
-				alert(result.msg);
-			}
-		}, 'json');
-	}
-};
 
-function sendverifi(_this)
-{
-	$(_this).parent().children('div').hide();
-	getCode.setinit(init);
-	getCode.obj = $(_this);
-	getCode.getCodeClick();
-}
-
-</script>
-
-<script>
-
-	function huodejiaodian(obj)
-	{
-		$(obj).parents('.register-li').find('label').addClass("register-li-span");
-
-		var aa = $(obj).parent().parent();
-		aa.children("div.register-li-3").hide();
-	}
-
-	function shiqujiaodian(obj,obj1)
-	{
-		//var aa = $(obj).parent().parent();
-		if('' == $(obj).val())
-		{
-			$("." + obj1).show();
-		}
-		else
-		{
-			//aa.children("div.register-li-1").html("");
-			$("." + obj1).hide();
-		}
-	}
-
-	function huodewenan(obj,obj1,obj2,obj3)
-	{
-//		$(obj).parents('.register-li').find('label').addClass("register-li-span");
-
-		var aa = $(obj).parent().parent();
-		//alert(aa.children("div." + obj2).html());
-		aa.children("div." + obj1).hide();
-		aa.children("div." + obj3).hide();
-		aa.children("div." + obj2).show();
-		aa.children("div.register-li-3").hide();
-		aa.children('label').animate({left:'-90px'},200);
-		aa.children(".verCodePrompt").remove();
-
-		if($(obj).attr('id') == 'rpassword'){
-			obj.type = 'password'
-		}
-	}
-
-	function shiquwenan(obj,obj1,obj2,obj3,flog)
-	{
-		var aa = $(obj).parent().parent();
-		aa.children("div." + obj2).hide();
-		if('' == $(obj).val())
-		{
-			aa.children("div." + obj1).hide();
-			aa.children("div." + obj3).show();
-		}
-	}
-
-//	function translateXX(obj){
-//		$(obj).parents('.register-li').find('label').addClass("register-li-span");
-//	}
-	
-</script>
-
-
-
-		<!-- buyfooter -->
-		<div class="main bgWhite">
-			<div class="minwidth">
-				<div class="minwidthauto indexBorderB">
-					<ul class="index-fo-info overflowhidden">
-						<li class="firstLi">
-							<i class="zz"></i>
-							<div class="textImgSeparation">
-								<h3>资质认证</h3>
-								<span>服务商100%实名审核认证</span>
-							</div>
-						</li>
-						<li>
-							<i class="zf"></i>
-							<div class="textImgSeparation">
-								<h3>支付安全</h3>
-								<span>明码标价支付及信息安全</span>
-							</div>
-						</li>
-						<li>
-							<i class="fw"></i>
-							<div class="textImgSeparation">
-								<h3>专人服务</h3>
-								<span>服务全程进行信息化监控</span>
-							</div>
-						</li>
-						<li>
-							<i class="sh"></i>
-							<div class="textImgSeparation">
-								<h3>售后无忧</h3>
-								<span>服务出问题客服经理全程跟进</span>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<!-- footer -->
-			<div style="float: left;height: auto;min-width: 1180px;overflow: hidden;position: relative;width: 100%;">
-				<div style="height: auto;margin: 0 auto;overflow: hidden;width: 1180px;">
-					<p style="color: #666;font-size: 12px;line-height: 1;margin: 24px 0;text-align: center;">Copyright © 2011-2015 www.xueli985.com All Rights Reserved &nbsp; &nbsp;技术支持：北京维思天下教育科技有限公司&nbsp;京ICP备12002978号</p>
-				</div>
-			</div>
-			<!-- footer -->
-		</div>
 		<script type="text/javascript">
 			$(function(){ 
 				$(".invoiceTip").hover(
