@@ -34,6 +34,9 @@
 	position: relative;
 	overflow: hidden;
 }
+#serviceInfo li p{
+	position: relative;
+}
 #serviceInfo li:hover{
 	background: #e5e5e5;
 }
@@ -71,4 +74,8 @@
 }
 #serviceInfo li .showMoreBox{
 	display: none;
+}
+#serviceInfo li .list-2{
+	position: absolute;
+	left: 300px;
 }
