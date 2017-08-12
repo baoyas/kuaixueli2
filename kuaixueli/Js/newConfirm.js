@@ -99,7 +99,7 @@ $(function ($) {
             $("#mb_box,#mb_con").remove();
         }
     }
-    kfwtips = function(title, message, callback) {
+    kxltips = function(title, message, callback) {
         $.alerts.tips(title, message, callback);
     }
 
